@@ -61,6 +61,5 @@ async function onFetchForm(e) {
       }
     }
   }
-  //   // clientMessage(send, sendImg.numberPages);
 }
 
