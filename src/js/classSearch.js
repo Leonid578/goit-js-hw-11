@@ -6,7 +6,7 @@ export class SendImg {
   }
   async fetchImg(send, numberPages) {
     const meta = new URLSearchParams({
-      key: '25398180-e4c47011137e03578f1d37584',
+      key: '25142623-5ec88ba8c20545ff15079e1b4',
       q: this.send,
       orientation: 'horizontal',
       safesearch: true,
@@ -14,7 +14,6 @@ export class SendImg {
       page: this.numberPages,
       per_page: this.pages,
     });
-    
     const url = `https://pixabay.com/api/?${meta}`;
     const res = await fetch(url);
     return res.json();
@@ -26,7 +25,7 @@ export class SendImg {
 
   set metodSend(newSend) {
     if (newSend === '') {
-      console.error('Ошибка! Строка не может быть пустой!');
+      console.error('Ошибка! Почта не может быть пустой строкой!');
       return;
     }
     this.send = newSend;
