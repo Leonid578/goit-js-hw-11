@@ -2,9 +2,9 @@ import './css/styles.css';
 // import axios from 'axios';
 import { SendImg } from './js/classOOP';
 import { addImg } from './js/htmlRender';
-import Notiflix from 'notiflix';
 import { scroll } from './js/scroll';
 import { remove } from './js/htmlRemove';
+import Notiflix from 'notiflix';
 
 const render = document.querySelector('#render');
 const more = document.querySelector('.load-more');
@@ -17,8 +17,9 @@ async function onFetchForm(e) {
   e.preventDefault();
   more.classList.remove('opasity');
   let valueInput = document.querySelector('#inputimg').value;
-  if (valueInput === '') {
+  if (valueInput.trim() === '') {
     remove(render);
+    console.log('Error')
   } else {
     remove(render);
     sendImg.startPages();

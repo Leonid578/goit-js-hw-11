@@ -14,6 +14,7 @@ export class SendImg {
       page: this.numberPages,
       per_page: this.pages,
     });
+    
     const url = `https://pixabay.com/api/?${meta}`;
     const res = await fetch(url);
     return res.json();
@@ -25,7 +26,7 @@ export class SendImg {
 
   set metodSend(newSend) {
     if (newSend === '') {
-      console.error('Ошибка! Почта не может быть пустой строкой!');
+      console.error('Ошибка! Строка не может быть пустой!');
       return;
     }
     this.send = newSend;
