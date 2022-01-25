@@ -1,7 +1,7 @@
 import './css/styles.css';
-import axios from 'axios';
+// import axios from 'axios';
 import { SendImg } from './js/classSearch';
-import { addImg } from './js/htmlRender';
+import { addImg } from './js/htmlSimpleLightbox';
 import { scroll } from './js/scroll';
 import { remove } from './js/htmlRemove';
 import Notiflix from 'notiflix';
