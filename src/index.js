@@ -1,8 +1,8 @@
 import './css/styles.css';
 import axios from 'axios';
 import { SendImg } from './js/classSearch';
-import { addImg } from './js/htmlSimpleLightbox';
-
+import { addImg } from './js/htmlRender';
+import { scroll } from './js/scroll';
 import { remove } from './js/htmlRemove';
 import Notiflix from 'notiflix';
 
@@ -19,7 +19,7 @@ async function onFetchForm(e) {
   let valueInput = document.querySelector('#inputimg').value;
   if (valueInput.trim() === '') {
     remove(render);
-    console.log('Error')
+    // console.log('Error')
   } else {
     remove(render);
     sendImg.startPages();
@@ -45,7 +45,7 @@ async function onFetchForm(e) {
         try {
           arrImg = await sendImg.fetchImg(sendImg.metodSend, sendImg.numberPages);
           addImg(arrImg);
-          // scroll();
+          scroll();
 
           if (arrImg.totalHits / sendImg.pages > sendImg.numberPages) {
             Notiflix.Notify.success(`Hooray! We found more ${sendImg.pages} images.`);
