@@ -106,6 +106,12 @@ footer {
   color: white;
   background-color:rgba(1, 1, 63, 0.712) ;
 }
+
+.load-more:hover{
+   background-color: white ;
+   color:black;
+  }
+
 .opasity {
   opacity: 1;
   transition-duration: 500ms;
