@@ -6,7 +6,7 @@ export class SendImg {
   }
   async fetchImg(send, numberPages) {
     const meta = new URLSearchParams({
-      key: '25142623-5ec88ba8c20545ff15079e1b4',
+      key: '25398180-e4c47011137e03578f1d37584',
       q: this.send,
       orientation: 'horizontal',
       safesearch: true,
